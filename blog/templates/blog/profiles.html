@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for profile in profiles %}
+        <div class="post">
+            <h1>{{ profile.name }}</a></h1>
+            <p>{{ profile.text|linebreaksbr }}</p>
+             <img src="{{ profile.picture }}" alt="Smiley face" height="42" width="42"> 
+        </div>
+    {% endfor %}
+{% endblock content %}

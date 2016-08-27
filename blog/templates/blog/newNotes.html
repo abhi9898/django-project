@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+ 
+ {% block content %}
+	
+	<body>
+		<h1>Join here</h1>
+		<div class = "email">
+	        <form action ="/addNotes/" method="POST"> {% csrf_token %}
+	            {{form.as_p}}
+	          	<input type="submit" value='Join' class='btn' />
+	        </form>
+	    </div>
+	</body>
+
+{% endblock content %}
